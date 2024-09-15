@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_flutter/resources/auth_methods.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
@@ -6,7 +7,9 @@ class MobileScreenLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("This is mobile"),
+      child: ElevatedButton(onPressed: (){
+         AuthMethods().signOutUser();
+      }, child: Text("Sign out"))
     );
   }
 }
